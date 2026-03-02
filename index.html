@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kitokod Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="particles-js"></div>
+  <!-- NAVBAR -->
+  <header>
+    <img src="./logo.png" alt="image">
+    <div class="logo">Kitokod</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Commander</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero reveal">
+    <div class="hero-text">
+      <h1>Nous créons des sites & applications mobiles modernes</h1>
+      <p>Solutions digitales innovantes pour entreprises ambitieuses.</p>
+      <a href="#contact" class="btn">Commander un projet</a>
+    </div>
+  </section>
+  
+  <!-- ABOUT -->
+  <section id="about" class="about reveal">
+    <div class="about-container">
+      
+      <div class="about-text">
+        <h2>À propos de Kitokod</h2>
+        <p>
+          Kitokod Studio est une entreprise spécialisée dans la création
+          de sites web modernes et d'applications mobiles performantes.
+        </p>
+        
+        <p>
+          Notre mission est d'aider les entreprises et entrepreneurs
+          à transformer leurs idées en solutions digitales innovantes,
+          rapides et élégantes.
+        </p>
+        
+        <p class="highlight">
+          Nous concevons des expériences digitales qui marquent.
+        </p>
+      </div>
+      
+      <div class="about-card">
+        <h3>Pourquoi nous choisir ?</h3>
+        
+        <ul>
+          <li>✔ Design moderne & professionnel</li>
+          <li>✔ Performance optimisée</li>
+          <li>✔ Solutions sur mesure</li>
+          <li>✔ Accompagnement personnalisé</li>
+        </ul>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services reveal">
+    <h2>Nos Services</h2>
+
+    <div class="cards-scroll">
+      <div class="card">
+        <h3>Création de site web</h3>
+        <p>Sites professionnels, rapides et optimisés.</p>
+      </div>
+
+      <div class="card">
+        <h3>Applications mobiles</h3>
+        <p>Applications Android & iOS performantes.</p>
+      </div>
+
+      <div class="card">
+        <h3>UI/UX Design</h3>
+        <p>Interfaces modernes et expérience utilisateur fluide.</p>
+      </div>
+    </div>
+  </section>
+  
+<!-- PORTFOLIO -->
+<!-- VITRINE PROJETS -->
+<section id="portfolio" class="portfolio reveal">
+  <h2>Votre Projet Peut Être le Prochain</h2>
+  <p class="portfolio-sub"> 
+    Nous construisons actuellement des solutions digitales modernes.
+    Faites partie de nos premiers partenaires.
+  </p>
+
+  <div class="portfolio-grid">
+
+<div class="project-card">
+  <img class="blur-img" src="image-calbus.png" alt="image">
+  
+  <div class="overlay">
+    <h3>Business calculator</h3>
+    <p>Calculatrice D'affaires multiples fonctions pour une comptabilité moyen stressante.</p>
+    <span class="badge">En cours</span>
+  </div>
+</div>
+
+    <div class="project-card">
+      <img class="blur-img" src="./image-fil.jpg" alt="image">
+      
+      <div class="overlay">
+      <h3>Gestionnaire ai Professionnelle</h3>
+      <p>Un système intelligent de gestion des fichiers pour entreprises.</p>
+      <span class="badge">Confidentiel</span>
+      </div>
+    </div>
+
+    <div class="project-card highlight">
+      <h3>Votre Projet Ici</h3>
+      <p>Nous accompagnons les entrepreneurs visionnaires.</p>
+      <a href="#contact" class="btn small-btn">Lancer mon projet</a>
+    </div>
+
+  </div>
+</section>
+  
+
+  <!-- FORMULAIRE -->
+  <section id="contact" class="contact reveal">
+    <h2>Commander un projet</h2>
+
+<form id="orderForm">
+  
+  <input type="text" name="user_name" placeholder="Nom complet" required>
+  
+  <input type="email" name="user_email" placeholder="Email professionnel" required>
+  
+  <input type="text" name="company_name" placeholder="Nom de l'entreprise (si applicable)">
+  
+  <select name="project_type" required>
+    <option value="">Type de projet</option>
+    <option>Site vitrine</option>
+    <option>E-commerce</option>
+    <option>Application mobile</option>
+    <option>Site + Application</option>
+    <option>Autre</option>
+  </select>
+  
+  <select name="budget" required>
+    <option value="">Budget estimatif</option>
+    <option>Moins de 500$</option>
+    <option>500$ - 1500$</option>
+    <option>1500$ - 5000$</option>
+    <option>Plus de 5000$</option>
+  </select>
+  
+  <select name="timeline" required>
+    <option value="">Délai souhaité</option>
+    <option>Urgent (1-2 semaines)</option>
+    <option>1 mois</option>
+    <option>2-3 mois</option>
+    <option>Flexible</option>
+  </select>
+  
+  <textarea name="message" placeholder="Décrivez votre projet en détail..." required></textarea>
+  
+  <button type="submit">Envoyer la demande</button>
+  
+</form>
+
+<p id="successMessage"></p>
+  </section>
+
+
+  
+  <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <h3>Kitokod</h3>
+      <p>Création de solutions digitales modernes.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <a href="#services">Services</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Commander</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Réseaux</h4>
+      <a href="#">Facebook</a>
+      <a href="https://www.linkedin.com/in/lievihno-montala-1b0098388">LinkedIn</a>
+      <a href="https://wa.me/message/J26ECASDNYSJB1">WhatsApp</a>
+    </div>
+
+  </div>
+
+  <p class="footer-bottom">
+  © <span id="year"></span> Kitokod Studio. Tous droits réservés.
+</p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
