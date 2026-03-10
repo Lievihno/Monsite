@@ -30,8 +30,16 @@ header {
   position: fixed;
   width: 100%;
   height: 12%;
-  z-index: 1000;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:2000;
+  background:transparent;
+  padding:15px 20px;
+
 }
+
+
 
 .logo {
   font-size: 24px;
@@ -57,6 +65,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   padding: 0 8%;
+  margin-top:80px;
 }
 
 .hero-text {
@@ -102,6 +111,7 @@ nav a:hover {
   font-size: 38px;
 }
 
+
 .cards {
   display: flex;
   justify-content: center;
@@ -124,7 +134,7 @@ nav a:hover {
   background: rgba(255,255,255,0.12);
 }
 
-/* CONTACT */
+ /*CONTACT */
 .contact {
   padding: 120px 8%;
 }
@@ -234,40 +244,10 @@ button:hover {
   transform: none !important;
 }
 
-/* HORIZONTAL SCROLL CARDS */
-.cards-scroll {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 20px;
-}
 
-/* Supprimer scrollbar moche */
-.cards-scroll::-webkit-scrollbar {
-  height: 6px;
-}
-
-.cards-scroll::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.2);
-  border-radius: 10px;
-}
-
-.card {
-  min-width: 280px;
-  flex-shrink: 0;
-}
-
-.cards-scroll {
-  scroll-snap-type: x mandatory;
-}
-
-.card {
-  scroll-snap-align: start;
-}
 
 .services {
-  padding: 120px 8%;
+  padding: 40px 0px;
   perspective: 1000px;
 }
 
@@ -290,7 +270,7 @@ button:hover {
   }
 }
 
-/* PORTFOLIO */
+
 /* PORTFOLIO VITRINE */
 .portfolio {
   padding: 120px 8%;
@@ -457,3 +437,201 @@ header img {
   height: 130px;
  
 }
+
+
+
+
+
+
+/* HAMBURGER */
+
+.menu-toggle{
+width:30px;
+height:22px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+cursor:pointer;
+z-index:1002;
+}
+
+.menu-toggle span{
+height:3px;
+width:100%;
+background:white;
+border-radius:3px;
+transition:0.4s;
+}
+
+
+/* animation X */
+
+.menu-toggle.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+
+.menu-toggle.active span:nth-child(2){
+opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
+}
+
+
+
+/* MENU DESCENDANT */
+
+.top-menu{
+position:fixed;
+top:-350px;
+left:0;
+width:100%;
+
+background:linear-gradient(
+135deg,
+#1b2a8f,
+#1f3fb5,
+#2b5cff
+);
+
+backdrop-filter:blur(15px);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:30px;
+
+padding:90px 0;
+
+transition:0.5s cubic-bezier(.77,0,.18,1);
+z-index:1001;
+}
+
+
+.top-menu a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.top-menu a:hover {
+  color: #6fe0ff;
+  transform: scale(1.05);
+}
+
+
+/* bouton commander */
+
+.top-menu .cta{
+
+background:linear-gradient(
+90deg,
+#6fe0ff,
+#7b61ff
+);
+
+padding:12px 28px;
+border-radius:30px;
+color:white;
+font-weight:600;
+}
+
+.top-menu .cta:hover{
+transform:scale(1.08);
+}
+
+
+/* menu actif */
+
+.top-menu.active{
+top:0;
+}
+
+
+
+/* OVERLAY FLOU */
+
+#menuOverlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(6px);
+opacity:0;
+visibility:hidden;
+transition:0.3s;
+z-index:1000;
+}
+
+#menuOverlay.active{
+opacity:1;
+visibility:visible;
+}
+
+
+
+
+.services-carousel{
+overflow:hidden;
+width:100%;
+position:relative;
+}
+
+
+.cards-scroll{
+display:flex;
+gap:30px;
+overflow:hidden;
+padding: 20px 0;
+}
+
+
+.card {
+  
+  min-width: 90%;
+  
+  background: rgba(255, 255, 255, 0.05);
+  
+  backdrop-filter: blur(12px);
+  
+  border-radius: 18px;
+  
+  padding: 35px 25px;
+  
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  
+  transition: 0.4s;
+  
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+min-height:160px;
+}
+
+
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:16px;
+opacity:0.9;
+}
+
