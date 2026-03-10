@@ -635,3 +635,57 @@ font-size:16px;
 opacity:0.9;
 }
 
+.process{
+
+padding:80px 20px;
+text-align:center;
+
+}
+
+.process-container{
+
+display:grid;
+grid-template-columns:1fr;
+gap:25px;
+margin-top:40px;
+
+}
+
+.process-step{
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+
+border-radius:16px;
+
+padding:30px 20px;
+
+transition:0.3s;
+
+}
+
+.process-step:hover{
+
+transform:translateY(-6px);
+
+}
+
+.step-number{
+
+width:45px;
+height:45px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+margin:0 auto 15px;
+
+border-radius:50%;
+
+background:linear-gradient(90deg,#6fe0ff,#7b61ff);
+
+font-weight:bold;
+font-size:18px;
+
+}
