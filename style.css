@@ -753,3 +753,12 @@ transform:translateY(0);
 
 }
 
+.footer img {
+  width: 50px;
+  height: 40px;
+}
+
+.footer h3 {
+  display: flex;
+  align-items: center;
+}
