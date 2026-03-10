@@ -484,7 +484,7 @@ transform:rotate(-45deg) translate(6px,-6px);
 
 .top-menu{
 position:fixed;
-top:-350px;
+top:-430px;
 left:0;
 width:100%;
 
@@ -500,7 +500,7 @@ backdrop-filter:blur(15px);
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:30px;
+gap:20px;
 
 padding:90px 0;
 
@@ -635,57 +635,120 @@ font-size:16px;
 opacity:0.9;
 }
 
-.process{
 
+
+.process{
 padding:80px 20px;
 text-align:center;
-
 }
 
-.process-container{
-
-display:grid;
-grid-template-columns:1fr;
-gap:25px;
-margin-top:40px;
-
+.timeline{
+position:relative;
+max-width:700px;
+margin:50px auto;
 }
 
-.process-step{
+/* ligne verticale */
 
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  
+  width: 3px;
+  height: 100%;
+  
+  background: #1b1b1b;
+  
+  transform: translateX(-50%);
+}
+
+/* ligne animée */
+
+.timeline-progress {
+  
+  position: absolute;
+  
+  left: 50%;
+  top: 0;
+  
+  width: 3px;
+  height: 0;
+  
+  background: linear-gradient(#6fe0ff, #7b61ff);
+  
+  transform: translateX(-50%);
+  
+  transition: height 0.3s ease;
+  
+}
+
+/* item */
+
+.timeline-item{
+display:flex;
+align-items:center;
+margin:40px 0;
+position:relative;
+}
+
+/* alternance gauche droite */
+
+.timeline-item:nth-child(odd){
+flex-direction:row-reverse;
+}
+
+/* contenu */
+
+.timeline-content{
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(10px);
 
-border-radius:16px;
+padding:20px;
+border-radius:12px;
 
-padding:30px 20px;
+width:45%;
 
-transition:0.3s;
-
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
-.process-step:hover{
+/* point */
 
-transform:translateY(-6px);
-
-}
-
-.step-number{
+.timeline-dot{
 
 width:45px;
 height:45px;
+
+background:linear-gradient(90deg,#6fe0ff,#7b61ff);
+
+border-radius:50%;
 
 display:flex;
 align-items:center;
 justify-content:center;
 
-margin:0 auto 15px;
-
-border-radius:50%;
-
-background:linear-gradient(90deg,#6fe0ff,#7b61ff);
-
+color:white;
 font-weight:bold;
-font-size:18px;
+
+position:absolute;
+
+left:50%;
+transform:translateX(-50%);
+
+}
+
+.timeline-content{
+
+opacity:0;
+transform:translateY(30px);
+transition:0.6s;
+
+}
+
+.timeline-item.visible .timeline-content{
+
+opacity:1;
+transform:translateY(0);
 
 }
