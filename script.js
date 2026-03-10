@@ -127,3 +127,43 @@ container.scrollLeft = scrollAmount
 }
 
 setInterval(autoScroll,20)
+
+
+
+
+const timeline = document.querySelector(".timeline")
+const progress = document.querySelector(".timeline-progress")
+
+window.addEventListener("scroll", () => {
+  
+  const rect = timeline.getBoundingClientRect()
+  const windowHeight = window.innerHeight
+  
+  const visible = windowHeight - rect.top
+  
+  const total = timeline.offsetHeight
+  
+  const percent = Math.min(Math.max(visible / total, 0), 1)
+  
+  progress.style.height = percent * 100 + "%"
+  
+})
+
+
+const items = document.querySelectorAll(".timeline-item")
+
+window.addEventListener("scroll",()=>{
+
+items.forEach(item=>{
+
+const rect = item.getBoundingClientRect()
+
+if(rect.top < window.innerHeight - 100){
+
+item.classList.add("visible")
+
+}
+
+})
+
+})
