@@ -167,3 +167,21 @@ item.classList.add("visible")
 })
 
 })
+
+
+const toggle = document.getElementById("chatbotToggle")
+const box = document.getElementById("chatbotBox")
+
+toggle.addEventListener("click",()=>{
+
+if(box.style.display === "block"){
+
+box.style.display="none"
+
+}else{
+
+box.style.display="block"
+
+}
+
+})
