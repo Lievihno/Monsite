@@ -70,3 +70,60 @@ particlesJS("particles-js", {
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+
+
+
+
+const toggle = document.getElementById("menuToggle")
+const menu = document.getElementById("topMenu")
+const overlay = document.getElementById("menuOverlay")
+
+function openMenu(){
+toggle.classList.add("active")
+menu.classList.add("active")
+overlay.classList.add("active")
+}
+
+function closeMenu(){
+toggle.classList.remove("active")
+menu.classList.remove("active")
+overlay.classList.remove("active")
+}
+
+toggle.addEventListener("click",()=>{
+
+if(menu.classList.contains("active")){
+closeMenu()
+}else{
+openMenu()
+}
+
+})
+
+overlay.addEventListener("click",closeMenu)
+
+document.querySelectorAll(".top-menu a").forEach(link=>{
+link.addEventListener("click",closeMenu)
+})
+
+
+
+
+const container = document.querySelector(".cards-scroll")
+
+let scrollAmount = 0
+
+function autoScroll(){
+
+scrollAmount += 1
+
+if(scrollAmount >= container.scrollWidth / 2){
+scrollAmount = 0
+}
+
+container.scrollLeft = scrollAmount
+
+}
+
+setInterval(autoScroll,20)
