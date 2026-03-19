@@ -59,7 +59,7 @@ nav a:hover {
   opacity: 0.6;
 }
 
-/* HERO */
+/* HERO 
 .hero {
   height: 100vh;
   display: flex;
@@ -761,4 +761,129 @@ transform:translateY(0);
 .footer h3 {
   display: flex;
   align-items: center;
+}
+
+
+/* HERO */
+
+.hero{
+
+position:relative;
+padding:120px 20px;
+text-align:center;
+overflow:hidden;
+
+}
+
+/* BACKGROUND GRADIENT ANIMÉ */
+
+.hero-bg{
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:radial-gradient(circle at 20% 30%, #6fe0ff, transparent 40%),
+           radial-gradient(circle at 80% 70%, #7b61ff, transparent 40%);
+
+filter:blur(100px);
+
+animation:moveBg 10s infinite alternate;
+
+z-index:-1;
+
+}
+
+@keyframes moveBg{
+
+0%{
+transform:translateY(0px);
+}
+
+100%{
+transform:translateY(-40px);
+}
+
+}
+
+/* TEXTE GRADIENT */
+
+.gradient-text{
+
+font-size:32px;
+font-weight:600;
+
+background:linear-gradient(90deg,#6fe0ff,#7b61ff);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+margin-bottom:15px;
+
+}
+
+/* TEXTE */
+
+.hero p{
+
+color:#ccc;
+max-width:500px;
+margin:auto;
+
+}
+
+/* BOUTON GLOW */
+
+.glow-btn{
+
+display:inline-block;
+margin-top:20px;
+
+padding:12px 25px;
+
+background:linear-gradient(90deg,#6fe0ff,#7b61ff);
+
+color:white;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-weight:500;
+
+position:relative;
+
+box-shadow:0 0 20px rgba(123,97,255,0.5);
+
+transition:0.3s;
+
+}
+
+.glow-btn:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 40px rgba(123,97,255,0.8);
+
+}
+
+.hero-text{
+
+opacity:0;
+transform:translateY(30px);
+
+animation:fadeHero 1s ease forwards;
+
+}
+
+@keyframes fadeHero{
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
 }
