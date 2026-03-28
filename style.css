@@ -1052,3 +1052,93 @@ transform:translateY(0);
   border-radius: 25px;
   
 }
+
+
+
+/* SLIDER */
+
+.tech-slider{
+
+margin-top:80px;
+overflow:hidden;
+
+position:relative;
+
+}
+
+/* FADE GAUCHE / DROITE (effet premium) */
+
+.tech-slider::before,
+.tech-slider::after{
+
+content:"";
+
+position:absolute;
+top:0;
+
+width:70px;
+height:100%;
+
+z-index:2;
+
+}
+
+.tech-slider::before{
+
+left:0;
+background:linear-gradient(to right,#1D2C8A,transparent);
+
+}
+
+.tech-slider::after{
+
+right:0;
+background:linear-gradient(to left,#3339A4,transparent);
+
+}
+
+/* TRACK */
+
+.tech-track{
+
+display:flex;
+gap:10px;
+
+width:max-content;
+
+animation:scrollTech 20s linear infinite;
+
+}
+
+/* IMAGE */
+
+.tech-track img{
+
+height:100px;
+
+opacity:0.7;
+
+transition:0.3s;
+
+}
+
+.tech-track img:hover{
+
+opacity:1;
+transform:scale(1.1);
+
+}
+
+/* ANIMATION */
+
+@keyframes scrollTech{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
